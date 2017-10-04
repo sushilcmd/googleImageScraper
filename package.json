@@ -1,7 +1,7 @@
 {
-    "name": "socket-chat-example",
+    "name": "google-image-scraper",
     "version": "0.0.1",
-    "description": "my first socket.io app",
+    "description": "scrap top 15 images from google",
     "dependencies": {
         "async": "^2.5.0",
         "body-parser": "^1.18.1",
