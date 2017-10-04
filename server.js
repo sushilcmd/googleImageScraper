@@ -7,9 +7,7 @@ var fs = require('fs');
 var download = require('image-downloader');
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
-//var url = 'mongodb://localhost:27017/imageScrapper';
-var url="
-mongodb://<sushilcmd>:<cmdcs@123>@ds163034.mlab.com:63034/imagesearch"
+var url = 'mongodb://localhost:27017/imageScrapper';
 var Scraper = require('images-scraper');
 var google = new Scraper.Google();
 var collection = 'images';
