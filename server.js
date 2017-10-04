@@ -5,15 +5,14 @@ var http = require('http').Server(app);
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var download = require('image-downloader');
-
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 var url = 'mongodb://localhost:27017/imageScrapper';
+var Scraper = require('images-scraper');
+var google = new Scraper.Google();
 var collection = 'images';
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
-
 var port = process.env.PORT || 4500;
 
 app.use(function(req, res, next) {
@@ -25,9 +24,6 @@ app.use(function(req, res, next) {
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/views/index.html');
 });
-
-var Scraper = require('images-scraper');
-var google = new Scraper.Google();
 
 app.post('/downloadImage', function(req, res) {
     google.list({
@@ -119,8 +115,7 @@ function deleteLocalFile(file) {
     }, 5000);
 }
 
-app.post('/getKeywords', function(req, res) {
-    var r = req.body;
+app.post('/getKeywordImage', function(req, res) {
     MongoClient.connect(url, function(err, db) {
         db.collection(collection).find({ 'keywordId': req.body.id }).sort({
             'insertedAt': -1,
@@ -130,6 +125,13 @@ app.post('/getKeywords', function(req, res) {
     })
 })
 
+app.post('/getAllData', function(req, res) {
+    MongoClient.connect(url, function(err, db) {
+        db.collection(collection).find({}).toArray(function(err, item) {
+            res.json(item);
+        })
+    })
+})
 
 http.listen(port, function() {
     console.log("listening on " + port);

@@ -36,9 +36,12 @@
             <div class="welcomeText">welcome to drawin image</div>
             <div class="searchBox">
                 <div class="inputBox">
-                    <input type="text" class="inputText" placeholder="enter keys">
+                    <input type="text" class="inputText" placeholder="enter search keyword">
                 </div>
                 <div class="btn search">search</div>
+                <div class="loading">
+                    <img src="../images/loading.gif" class="icon">
+                </div>
             </div>
         </div>
     </div>
@@ -52,10 +55,11 @@
         <input type="text" class="inputText" placeholder="serach keyword">
     </div>
     <div class="keyWords">
-        {^{for localData}}
-        <div class="keyword {{:_id}}">{^{:keyword}}</div>
-        {{/for}}
+
     </div>
+</script>
+<script type="text/x-jsrender" id="keywordsTemplate">
+    <div class="keyword {{:_id}}">{^{:keyword}}</div>
 </script>
 
 <script type="text/x-jsrender" id="imageContainerTemplate">

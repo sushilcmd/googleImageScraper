@@ -22,7 +22,7 @@ function postExecute(data) {
 
 function getExecute(data) {
     return new Promise((res, rej) => {
-        execute('getKeywords', data).then(function(r) {
+        execute('getKeywordImage', data).then(function(r) {
             if (r) {
                 console.log(r);
                 res(r);

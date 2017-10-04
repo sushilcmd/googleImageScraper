@@ -18,7 +18,7 @@ body {
             position: absolute;
             height: 100%;
             width: 100%;
-            background: rgba(0, 0, 0, 0.71);
+            background: rgba(0, 0, 0, 0.81);
             .header {
                 position: absolute;
                 height: 8rem;
@@ -180,6 +180,25 @@ body {
                         font-size: 1.5rem;
                         font-weight: 200;
                     }
+                    .loading {
+                        position: absolute;
+                        right: 0rem;
+                        height: 100%;
+                        width: 12rem;
+                        background: #000000;
+                        border: 1px solid #fff;
+                        border-radius: 0.5rem;
+                        text-transform: uppercase;
+                        display: none;
+                        .icon
+                        {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%);
+                            height: 3rem;
+                        }
+                    }
                 }
             }
         }
@@ -188,7 +207,7 @@ body {
         position: absolute;
         height: 100%;
         width: 100%;
-        background: #fff;
+        background: linear-gradient(to right, #000000, #434343);
         display: none;
         .header {
             position: absolute;
@@ -214,14 +233,20 @@ body {
             top: 8rem;
             bottom: 0rem;
             width: 100%;
+            overflow: auto;
+            padding-bottom: 3rem;
+            box-sizing: border-box;
             .image {
                 position: relative;
                 float: left;
                 height: 18.5rem;
                 width: 26.5rem;
-                background: red;
+                background: linear-gradient(to left, #f1f2b5, #135058);
                 margin-top: 2rem;
                 margin-left: 2rem;
+                border: 1px solid #fff;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 10px rgba(255, 193, 7, 0.18);
                 .innerImage {
                     position: absolute;
                     width: 100%;
