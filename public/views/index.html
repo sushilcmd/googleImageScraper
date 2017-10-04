@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/screen.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/fonts.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="homeScreenContainer">
+
+        </div>
+        <div class="imageContainer">
+
+        </div>
+    </div>
+</body>
+
+<script type="text/x-jsrender" id="homeScreenContainerTemplate">
+    <div class="overlay">
+        <div class="header">
+            <div class="keyWordIcon">
+                <img src="../images/menu.png" class="menuIcon">
+            </div>
+            <div class="keywordContainer">
+
+            </div>
+        </div>
+        <div class="searchContainer">
+            <div class="welcomeText">welcome to drawin image</div>
+            <div class="searchBox">
+                <div class="inputBox">
+                    <input type="text" class="inputText" placeholder="enter keys">
+                </div>
+                <div class="btn search">search</div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-jsrender" id="keywordsContainerTemplate">
+    <div class="arrowIcon">
+        <img src="../images/arrowUp.png" class="icon">
+    </div>
+    <div class="searchKeyword">
+        <input type="text" class="inputText" placeholder="serach keyword">
+    </div>
+    <div class="keyWords">
+        {^{for localData}}
+        <div class="keyword {{:_id}}">{^{:keyword}}</div>
+        {{/for}}
+    </div>
+</script>
+
+<script type="text/x-jsrender" id="imageContainerTemplate">
+    <div class="header">
+        <div class="btn close">
+            <img src="../images/cross.png" class="crossIcon">
+        </div>
+    </div>
+    <div class="contentContainer">
+
+    </div>
+</script>
+
+<script type="text/x-jsrender" id="keywordImagesTemplate">
+    <div class="image">
+        <img src="{{:sortPath}}" class="innerImage">
+    </div>
+</script>
+
+<script type="text/javascript" src="../scripts/jquery.js"></script>
+<script type="text/javascript" src="../scripts/jsrender.js"></script>
+<script type="text/javascript" src="../scripts/jsviews.js"></script>
+<script type="text/javascript" src="../js/appConfig.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../screens/homeScreen/screen.js"></script>
+<script type="text/javascript" src="../screens/imageScreen/screen.js"></script>
+<script type="text/javascript" src="../screens/keywordsScreen/screen.js"></script>
+
+</html>

@@ -1,0 +1,233 @@
+body {
+  margin: 0rem;
+  padding: 0rem;
+  font-family: "Montserrat";
+}
+.mainContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.mainContainer .homeScreenContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url('../images/bg.jpg');
+  background-size: cover;
+}
+.mainContainer .homeScreenContainer .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.71);
+}
+.mainContainer .homeScreenContainer .overlay .header {
+  position: absolute;
+  height: 8rem;
+  width: 100%;
+}
+.mainContainer .homeScreenContainer .overlay .header .keyWordIcon {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+}
+.mainContainer .homeScreenContainer .overlay .header .keyWordIcon .menuIcon {
+  position: absolute;
+  height: 3rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .homeScreenContainer .overlay .header .keywordContainer {
+  position: absolute;
+  height: 40rem;
+  width: 30rem;
+  right: 3rem;
+  background: #fff;
+  top: 7rem;
+  z-index: 100;
+  border-radius: 0.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.49);
+  box-shadow: 0px 0px 5px #fff;
+  box-sizing: border-box;
+  display: none;
+}
+.mainContainer .homeScreenContainer .overlay .header .keywordContainer .arrowIcon {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  top: -2rem;
+  right: 1rem;
+  z-index: 100;
+}
+.mainContainer .homeScreenContainer .overlay .header .keywordContainer .arrowIcon .icon {
+  position: absolute;
+  height: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mainContainer .homeScreenContainer .overlay .header .keywordContainer .searchKeyword {
+  position: absolute;
+  height: 5rem;
+  left: 1rem;
+  right: 1rem;
+  outline: none;
+  border: 3px solid lightgray;
+  top: 1rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+.mainContainer .homeScreenContainer .overlay .header .keywordContainer .searchKeyword .inputText {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: left;
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+.mainContainer .homeScreenContainer .overlay .header .keywordContainer .keyWords {
+  position: absolute;
+  top: 7rem;
+  bottom: 0rem;
+  width: 100%;
+  overflow: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+.mainContainer .homeScreenContainer .overlay .header .keywordContainer .keyWords .keyword {
+  position: relative;
+  float: left;
+  height: 4rem;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  line-height: 4rem;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+.mainContainer .homeScreenContainer .overlay .searchContainer {
+  position: absolute;
+  height: 15rem;
+  width: 60rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+.mainContainer .homeScreenContainer .overlay .searchContainer .welcomeText {
+  position: relative;
+  float: left;
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+}
+.mainContainer .homeScreenContainer .overlay .searchContainer .searchBox {
+  position: relative;
+  float: left;
+  height: 5rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+.mainContainer .homeScreenContainer .overlay .searchContainer .searchBox .inputBox {
+  position: absolute;
+  height: 100%;
+  left: 0rem;
+  right: 13rem;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+}
+.mainContainer .homeScreenContainer .overlay .searchContainer .searchBox .inputBox .inputText {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+.mainContainer .homeScreenContainer .overlay .searchContainer .searchBox .btn {
+  position: absolute;
+  right: 0rem;
+  height: 100%;
+  width: 12rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+.mainContainer .imageContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+.mainContainer .imageContainer .header {
+  position: absolute;
+  height: 8rem;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+.mainContainer .imageContainer .header .btn {
+  position: absolute;
+  right: 0rem;
+  height: 100%;
+  width: 10rem;
+}
+.mainContainer .imageContainer .header .btn .crossIcon {
+  position: absolute;
+  height: 3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .imageContainer .contentContainer {
+  position: absolute;
+  top: 8rem;
+  bottom: 0rem;
+  width: 100%;
+}
+.mainContainer .imageContainer .contentContainer .image {
+  position: relative;
+  float: left;
+  height: 18.5rem;
+  width: 26.5rem;
+  background: red;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.mainContainer .imageContainer .contentContainer .image .innerImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
